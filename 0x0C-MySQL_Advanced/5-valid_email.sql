@@ -1,17 +1,14 @@
-
--- Show and add orders
-SELECT *
-FROM items;
-SELECT *
-FROM orders;
-INSERT INTO orders (item_name, number)
-VALUES ('apple', 1);
-INSERT INTO orders (item_name, number)
-VALUES ('apple', 3);
-INSERT INTO orders (item_name, number)
-VALUES ('pear', 2);
-SELECT "--";
-SELECT *
-FROM items;
-SELECT *
-FROM orders;
+-- 5-valid_email.sql / 0x0C. MySQL advanced /  Web Stack programming ― Back-end
+--  Creates a trigger that resets the attribute valid_email only when the email has been changed
+DELIMITER $$
+CREATE
+    TRIGGER email_validation
+    BEFORE UPDATE ON users
+    FOR EACH ROW
+    BEGIN
+        IF NEW.email <> OLD.email
+            THEN
+                SET NEW.valid_email = 0;
+        END IF;
+    END$$
+DELIMITER ;
