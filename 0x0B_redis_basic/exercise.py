@@ -7,6 +7,22 @@ from functools import wraps
 from typing import Callable, Union
 
 
+def count_calls(method: Callable) -> Callable:
+    """ Method to count calls decorator that takes
+    method Callable as single argument and returns
+    a Callable """
+    key = method.__qualname__
+
+    @wraps(method)
+    def wrapper(self, *args, **kwargs):
+        """Method wrapper increment the count for
+        that key every time the method is called and
+        returns the value returned by the original method."""
+        self._redis.incr(key)
+        return method(self, *args, **kwargs)
+    return wrapper
+
+
 class Cache():
     """Redis´s  Class Cache"""
 
@@ -14,6 +30,7 @@ class Cache():
         self._redis = redis.Redis()
         self._redis.flushdb()
 
+    @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """ Store method
             Args: data(Union[str, bytes, int, float]): Data to be store
