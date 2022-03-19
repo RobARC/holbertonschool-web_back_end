@@ -56,20 +56,20 @@ def replay(fn: Callable):
         n_calls = 0
     print(f'{f_name} was called {n_calls} times:')
 
-    ins = r.lrange(f_name + ':inputs', 0, -1)
-    outs = r.lrange(f_name + ':outputs', 0, -1)
+    ins = r.lrange(f_name + ":inputs", 0, -1)
+    outs = r.lrange(f_name + ":outputs", 0, -1)
 
     for i, o in zip(ins, outs):
         try:
             i = i.decode('utf-8')
         except Exception:
-            i = ''
+            i = ""
         try:
             o = o.decode('utf-8')
         except Exception:
-            o = ''
+            o = ""
 
-        print(f'{f_name}(*{i} -> {o}')
+        print(f'{f_name}(*{i}) -> {o}')
 
 
 class Cache():
