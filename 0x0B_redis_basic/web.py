@@ -12,6 +12,7 @@ client = redis.Redis()
 def count_request(method: Callable) -> Callable:
     """ Method decorator to count how many request has been made """
 
+    @wraps(method)
     def wrapper(url):
         """ function wrapper """
         client.incr(f"count:{url}")
