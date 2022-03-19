@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """ Redis and Python exercise """
+
 import redis
 import uuid
 from functools import wraps
 from typing import Callable, Union
+
 
 class Cache():
     """Redis´s  Class Cache"""
