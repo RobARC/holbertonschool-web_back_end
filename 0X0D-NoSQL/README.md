@@ -8,7 +8,7 @@
 ##### <li>[What is NoSQL ?](https://intranet.hbtn.io/rltoken/8VpibJeEpPIdt9VGxXx5EQ)</li>
 ##### <li>[MongoDB with Python Crash Course - Tutorial for Beginners](https://intranet.hbtn.io/rltoken/8wsp1YBvkmbmPzdhtjI1uQ)</li>
 ##### <li>[MongoDB Tutorial 2 : Insert, Update, Remove, Query](https://intranet.hbtn.io/rltoken/j8Km9rDeAfwz2D3sSoqmHQ)</li>
-##### <li>[Aggregation(https://intranet.hbtn.io/rltoken/LvWSSDCTxMWY5dMJQVwd6g)]</li>
+##### <li>[Aggregation](https://intranet.hbtn.io/rltoken/LvWSSDCTxMWY5dMJQVwd6g)</li>
 ##### <li>[Introduction to MongoDB and Python](https://intranet.hbtn.io/rltoken/Voj4w7WCWEoXh5BCBJuiow)</li>
 ##### <li>[mongo Shell Methods](https://intranet.hbtn.io/rltoken/TgwNw5Ncz00kKw1Cls6jHg)</li>
 ##### <li>[The mongo Shell](https://intranet.hbtn.io/rltoken/J1D8scfnZ7Vdh9c28VrMMQ)</li>
