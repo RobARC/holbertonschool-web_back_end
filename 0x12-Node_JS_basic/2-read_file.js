@@ -1,4 +1,3 @@
-3 lines (32 sloc) 971 Bytes
 const fs = require('fs');
 
 function countStudents(path) {
@@ -31,3 +30,4 @@ function countStudents(path) {
     throw new Error('Cannot load the database');
   }
 }
+module.exports = countStudents;
